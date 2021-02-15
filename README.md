@@ -1,14 +1,11 @@
 # seq-4-evAglo4
 
-|          | Tri par sélection durée | Tri par insertion durée | vainqueur | écart relatif |
-| -------- | ----------------------- | ----------------------- | --------- | ------------- |
-| 50 str   | 2,00E-03                | 1,00E-03                | Insertion | 50,01%        |
-| 50 tuple | 2,00E-03                | 1,00E-03                | Insertion | 50,03%        |
-| 50 int   | 1,00E-03                | 2,00E-03                | Sélection | 49,99%        |
-| 50 float | 1,00E-03                | 2,00E-03                | Sélection | 50,01%        |
-| 50 bool  | 2,00E-03                | 1,00E-03                | Insertion | 50,01%        |
-| 1000 int | 5,78E-01                | 5,39E-01                | Insertion | 6,75%         |
+|          | Tri par sélection durée | Tri par insertion durée | Tri par quicksort durée | Tri par merge sort durée | vainqueur | écart relatif |
+| -------- | ----------------------- | ----------------------- | ----------------------- | ------------------------ | --------- | ------------- |
+| 50 str   | 1,40E-02                | 1,40E-02                | 0,01                    | 0,03                     | Quicksort | 50,00%        |
+| 50 tuple | 1,80E-02                | 1,40E-02                | 0,01                    | 0,03                     | Quicksort | 66,67%        |
+| 50 int   | 1,40E-02                | 1,20E-02                | 0,01                    | 0,03                     | Quicksort | 50,00%        |
+| 50 float | 1,40E-02                | 1,30E-02                | 0,01                    | 0,03                     | Quicksort | 50,00%        |
+| 50 bool  | 1,40E-02                | 8,00E-03                | 0,01                    | 0,03                     | Quicksort | 42,86%        |
+| 1000 int | 5,51E+00                | 4,80E+00                | 0,44                    | 0,97                     | Quicksort | 92,05%        |
 
-
-On remarque que le tri par insertion est plus performant que le tri par sélection sur les types comme les string, les tuples, et les boolléens.
-Le tri par sélection est plus performant sur jeux de données de ptites tailles commes les int et les float, seulement pour les jeux de données plus importants le tri par insertion remporte.
